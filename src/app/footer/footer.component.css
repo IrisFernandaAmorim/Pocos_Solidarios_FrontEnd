@@ -1,0 +1,32 @@
+.bg{
+    background-color: #012951;
+}
+ul.social-network{
+
+    list-style: none;
+    padding: 0;
+
+}
+
+ul.social-network li{
+
+    display: inline;
+    text-align: center;
+    margin: 0px;
+    padding: 30px;
+
+}
+.fa-facebook-square{
+
+    color: white;
+}
+
+.fa-behance{
+
+    color: white;
+}
+
+.fa-linkedin-square{
+
+    color:white;
+}
