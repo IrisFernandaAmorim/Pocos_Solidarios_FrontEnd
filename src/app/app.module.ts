@@ -16,7 +16,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
 
     MenuComponent,
-    FooterComponent
+    FooterComponent,
 
     LoginComponent,
     CadastroComponent
