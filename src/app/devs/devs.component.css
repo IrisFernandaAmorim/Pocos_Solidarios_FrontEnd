@@ -1,0 +1,96 @@
+.card{
+    width: 18rem;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.card-group{
+    background-color: rgba(224, 248, 218, 0.247);
+    display: flex;
+}
+h1{ 
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 2s steps(13) 
+    infinite alternate,
+      blink 800ms steps(13) infinite normal;
+    border-right: 5px solid black;
+}
+.all{
+    height: 100vh;
+    background-color:  rgba(224, 248, 218, 0.247);
+}
+
+ul.social-network{
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul.social-network li{
+      display: inline;
+      margin: 0;
+      padding: 5px;
+  }
+  
+  .fa{
+      font-size: 35pt;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+  }
+  
+  .fa-linkedin:hover{
+          color: rgb(52, 52, 163);
+  }
+  .fa-instagram:hover{
+     
+          background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+          background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+  
+        
+  }
+  .fa-github:hover{
+          color: rgb(39, 37, 37);
+  }
+
+  .card-img-top{
+    width: 150px;
+    border-radius: 1000px;
+  }
+  .img-logo{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* TEXTO AUTO DIGITAVEL */
+ h1{
+    text-align: center;
+    color: rgb(0, 0, 0); 
+    font-family: "Courier";
+    font-size: 50px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: type 4s steps(60, end); 
+    
+  }
+  
+  
+  h1:nth-child(2){
+    animation: type2 8s steps(60, center);
+  }
+  
+  h1{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+
+  @keyframes type{ 
+    from { width: 0; } 
+  } 
+  
+ 
