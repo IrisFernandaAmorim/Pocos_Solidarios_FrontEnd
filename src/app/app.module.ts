@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { DevsComponent } from './devs/devs.component';
+import { MenuHomeComponent } from './menu/menu-home/menu-home.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { InicioComponent } from './inicio/inicio.component';
     LoginComponent,
     CadastroComponent,
     InicioComponent,
-    HomeComponent
+    HomeComponent,
+    DevsComponent,
+    MenuHomeComponent
   ],
   imports: [
     BrowserModule,
