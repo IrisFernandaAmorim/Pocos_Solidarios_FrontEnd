@@ -8,6 +8,8 @@
     background-color: rgba(224, 248, 218, 0.247);
     display: flex;
 }
+
+
 h1{ 
     white-space: nowrap;
     overflow: hidden;
@@ -70,10 +72,9 @@ ul.social-network{
     color: rgb(0, 0, 0); 
     font-family: "Courier";
     font-size: 50px;
-    margin: 10px 0 0 10px;
     white-space: nowrap;
     overflow: hidden;
-    width: 30em;
+    width: 100%;
     animation: type 4s steps(60, end); 
     
   }
