@@ -9,10 +9,12 @@ import { FooterComponent } from './footer/footer.component';
 
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+
 
 @NgModule({
   declarations: [
@@ -21,12 +23,13 @@ import { InicioComponent } from './inicio/inicio.component';
     FooterComponent,
     LoginComponent,
     CadastroComponent,
-    InicioComponent
+    InicioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, 
+    HttpClientModule,
     FormsModule
 
   ],

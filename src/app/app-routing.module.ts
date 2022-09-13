@@ -4,13 +4,14 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { Tema } from './model/Tema';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   
+  {path: 'home', component: HomeComponent},
 
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
-  
   {path: 'login', component: LoginComponent},
   {path: 'cadastrar', component: CadastroComponent },
 
