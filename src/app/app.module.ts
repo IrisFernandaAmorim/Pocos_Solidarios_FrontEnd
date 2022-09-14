@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { DevsComponent } from './devs/devs.component';
 import { MenuHomeComponent } from './menu/menu-home/menu-home.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MenuHomeComponent } from './menu/menu-home/menu-home.component';
     InicioComponent,
     HomeComponent,
     DevsComponent,
-    MenuHomeComponent
+    MenuHomeComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
