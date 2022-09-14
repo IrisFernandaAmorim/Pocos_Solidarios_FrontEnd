@@ -1,68 +1,82 @@
-<app-usuario></app-usuario>
-                                                    <!---POSTTTTT-->
+<div class="d-flex">
+    <app-usuario></app-usuario>
+                                                        <!---POSTTTTT-->
 
- <!-- POST USER PERFIL-->
-    <div class="write-post-container">
-
-        <div class="user-profile">
-            <img src="../../assets/img/Narcisa.jpg" alt="">
-            <div>
-                <p>Narcisa Tamborindeguy</p>
-                <small>Doadora<i class="fa fa-caret-down" aria-hidden="true"></i></small>
+    <!-- POST USER PERFIL-->
+        <div class="write-post-container">
+        
+            <div class="user-profile">
+                <img src="{{user.foto}}" alt="">
+                <div>
+                    <p >{{user.nome}}</p>
+                    <small>{{user.tipo}}</small>
+                </div>
             </div>
-        </div>
 
-        <div class="post-container"> 
 
-            <textarea  rows="3" placeholder="Escreva aqui a sua publicação"></textarea>
 
-            <div class=" post-links">
-               <a href="#"><i class="fa fa-picture-o" aria-hidden="true">Foto/vídeo</i></a>
+            <div class="post-container"> 
+
+                <textarea  rows="3" [(ngModel)]='postagem.legenda' placeholder="Escreva aqui a sua publicação"></textarea>
+                
+                <div class=" post-links">
+                <a href="#"><i class="fa fa-picture-o" aria-hidden="true">Foto/vídeo</i></a>
+                <button class="btn btn-success" (click)="publicar()">Postar</button>
+                </div>
+
+                
+
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Temas
+                </a>
+                
+                <div class="card-columns" *ngFor="let tema of listaTemas">
+                    <div class="card text-center" *ngFor='let item of tema.postagem'>
+                        <div class="card-body">
+                            <small class="text-muted ">Tema: {{tema.descricao}}</small>
+                        
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <!-- Card-Feed-->
 
-    </div>
- <!-- POST USER PERFIL-->
+            <div class="feed-container">
+                
+                <div class="row">
+                    <div class="user-profile">
+                        <img src="../../assets/img/Narcisa.jpg" alt="">
+                        <div>
+                            <p>{{user.nome}}</p>
+                            <small>14 de Setembro de 2022 às 12:00<i class="fa fa-caret-down" aria-hidden="true"></i></small>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                </div>
 
 
+                <p class="post-text"> Doando milhoes para fundação POÇO SOLIDARIO
+                    <a href="#">#DOAÇÃO</a>
+                </p>
+                <img src="../../assets/img/construção.jpg" alt="FOTOO POSTADA" class="post-img">
 
-<!-- Card-Feed-->
-<div class="feed-container">
+                <!--ICON DOAR-->
 
-    <div class="row">
-        <div class="user-profile">
-            <img src="../../assets/img/Narcisa.jpg" alt="">
-            <div>
-                <p>Narcisa Tamborindeguy</p>
-                <small>14 de Setembro de 2022 às 12:00<i class="fa fa-caret-down" aria-hidden="true"></i></small>
+                <div class="post-row">
+                    <div class="icons">
+                        <div><i class="fa fa-heart" aria-hidden="true">Doar</i></div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
-    </div>
+                </div>
+    <!-- POST USER PERFIL-->
 
 
-    <p class="post-text"> Doando milhoes para fundação POÇO SOLIDARIO
-        <a href="#">#DOAÇÃO</a>
-    </p>
-    <img src="" alt="FOTOO POSTADA" class="post-img">
-
-    <!--ICON DOAR-->
-
-    <div class="post-row">
-        <div class="icons">
-            <div><i class="fa fa-heart" aria-hidden="true">Doar</i></div>
-        </div>
-    </div>
 
 
-    <!--ENTRAR EM CONTATO-->
-    <div class="profile-icon">
-        <img src="" alt="FOTO DO PROFILE DO USER">
-        <i class="fa-solid fa-caret-down"></i>
-    </div>
 
 </div>
-
-
                                           
  
