@@ -18,7 +18,6 @@ const routes: Routes = [
   {path: 'cadastrar', component: CadastroComponent },
 
   {path: 'inicio', component: InicioComponent},
-  {path: 'tema', component: Tema},
   {path: 'devs', component:DevsComponent},
   {path: 'temas', component: TemaComponent}
   

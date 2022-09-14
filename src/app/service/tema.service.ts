@@ -24,23 +24,23 @@ export class TemaService {
    }
 
     getAllTema(): Observable<Tema[]>{
-      return this.http.get<Tema[]>(`${baseUrl}temas`,this.getToken())
+      return this.http.get<Tema[]>(`${baseUrl}tema`,this.getToken())
     }
 
     getByIdTema(id:number): Observable<Tema>{
-      return this.http.get<Tema>(`${baseUrl}temas/${id}`,this.getToken())
+      return this.http.get<Tema>(`${baseUrl}tema/${id}`,this.getToken())
     }
 
     postTema(tema:Tema): Observable<Tema>{
-        return this.http.post<Tema>(`${baseUrl}temas`,tema,this.getToken())
+        return this.http.post<Tema>(`${baseUrl}tema`,tema,this.getToken())
     }
 
     putTema(tema:Tema):Observable<Tema>{
-       return this.http.put<Tema>(`${baseUrl}temas`,tema, this.getToken())
+       return this.http.put<Tema>(`${baseUrl}tema`,tema, this.getToken())
     }
 
 
     deleteTema(id: number){
-      return this.http.delete(`${baseUrl}temas/${id}`,this.getToken())
+      return this.http.delete(`${baseUrl}tema/${id}`,this.getToken())
     }
 }

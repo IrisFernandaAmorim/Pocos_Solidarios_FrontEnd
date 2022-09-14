@@ -26,6 +26,8 @@ export class InicioComponent implements OnInit {
   user:User = new User()
   idUser = environment.id
 
+  userLocal = environment.endereco
+
   constructor(
     
     private router: Router,
@@ -92,6 +94,7 @@ export class InicioComponent implements OnInit {
       
       this.user.id = this.idUser
       this.postagem.user = this.user
+      this.postagem.localizacao = this.user.endereco
 
       this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem)=>{
         this.postagem = resp
