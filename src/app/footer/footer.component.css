@@ -1,32 +1,44 @@
+
 .bg{
-    background-color: #012951;
-}
-ul.social-network{
-
-    list-style: none;
-    padding: 0;
+    background-color: #384f3f;
+    color:white;
+    
 
 }
 
-ul.social-network li{
 
-    display: inline;
-    text-align: center;
-    margin: 0px;
-    padding: 30px;
+
+
+
+/* icones da rede social*/
+
+.social-network {
+
+    font-size: 40px;
 
 }
+
+
 .fa-facebook-square{
 
     color: white;
 }
 
-.fa-behance{
+.fa-twitter{
+
+    color: white;
+}
+.fa-google{
 
     color: white;
 }
 
 .fa-linkedin-square{
+
+    color:white;
+}
+
+.fa-instagram{
 
     color:white;
 }
