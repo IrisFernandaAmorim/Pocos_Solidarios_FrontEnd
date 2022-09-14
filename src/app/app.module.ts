@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HashLocationStrategy,LocationStrategy } from '@angular/common';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -12,11 +14,12 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { DevsComponent } from './devs/devs.component';
 import { MenuHomeComponent } from './menu/menu-home/menu-home.component';
 import { TemaComponent } from './tema/tema.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 @NgModule({
@@ -30,16 +33,22 @@ import { TemaComponent } from './tema/tema.component';
     HomeComponent,
     DevsComponent,
     MenuHomeComponent,
-    TemaComponent
+    TemaComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
 
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass:HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
