@@ -1,0 +1,49 @@
+.card-img-top{
+    width: 150px;
+    border-radius: 1000px;
+  }
+
+  .img-name{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+   .fa-home{
+    color: rgb(46, 46, 161);
+   }
+
+  .fa-address-book-o{
+    color: rgb(28, 99, 14);
+  }
+
+  .fa-cog{
+    color: black;
+  }
+  a{
+    margin-left: 10px;
+  }
+
+  .list-group,
+  .list-group-item,
+  .list-group-flush {
+    border-bottom: 0;
+    border-top: 0;
+  }
+
+.sair{
+    border-top: 1px solid rgba(196, 192, 192, 0.726);
+}
+
+.conf{
+    margin-bottom: 20px;
+}
+
+.but{
+  background-color: transparent;
+  border-width: 0px;
+  border-color:0ch;
+  border-image: initial;
+  outline: none;
+}
