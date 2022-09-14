@@ -24,6 +24,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
+function NgModule(arg0: { imports: any[]; exports: any[]; }) {
+  throw new Error('Function not implemented.');
+}
+
