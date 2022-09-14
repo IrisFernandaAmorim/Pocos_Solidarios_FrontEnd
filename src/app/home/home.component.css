@@ -1,7 +1,38 @@
-.jumbotron {
-    background: #556847;
+#bg {
+    background: url(../../assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: end;
+    filter:blur(2px);
 }
 
-.button{
-    border-style: none;
+
+p{
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+}
+
+.svg-inline--fa.fa-w-12 {
+    width: .75em;
+}
+
+.me-3 {
+    margin-right: 1rem !important;
+}
+
+

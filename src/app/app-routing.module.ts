@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { Tema } from './model/Tema';
 import { HomeComponent } from './home/home.component';
 import { DevsComponent } from './devs/devs.component';
+import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
 
@@ -18,7 +19,8 @@ const routes: Routes = [
 
   {path: 'inicio', component: InicioComponent},
   {path: 'tema', component: Tema},
-  {path: 'devs', component:DevsComponent}
+  {path: 'devs', component:DevsComponent},
+  {path: 'temas', component: TemaComponent}
   
 ];
 
@@ -27,7 +29,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule { }
-function NgModule(arg0: { imports: any[]; exports: any[]; }) {
-  throw new Error('Function not implemented.');
-}
-
