@@ -106,10 +106,6 @@ export class InicioComponent implements OnInit {
     }
 
   irTema(){
-    this.router.navigate(['/tema'])
+    this.router.navigate(['/temas'])
   }
-
-
-
-
 }

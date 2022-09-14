@@ -28,7 +28,8 @@
                 
 
                 <div class="form-group">
-                    <label for="tema">Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal"></button></label>
+                    <label for="tema">Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo tema</button>
+                    </label>
                     <select class="form-control" name="tema" id="tema"  [(ngModel)]='idTema' (change)="findByIdTema()">
                         <option *ngFor='let item of listaTemas' value="{{item.id}}">
                           {{item.descricao}}
