@@ -1,0 +1,103 @@
+<div class="card" style="width: 18rem;">
+    <div class="img-name">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3b3HwlPW0CVbEOQ_ftF1Giki1C_uv7-Y6AA&usqp=CAU" alt="Card image cap" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{user.nome}}</h5>
+        </div>
+    </div>    
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <a  href="...">Feed</a>
+        </li>
+
+        <li class="list-group-item">
+            <i class="fa fa-address-book-o" aria-hidden="true"></i>
+           <a>Meus Posts</a>
+        </li>
+
+        <li class="list-group-item conf">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+                 <button  class="but me-2" data-toggle="modal" data-target="#exampleModalCenter">
+                Configurações
+              </button>
+        </li>
+    </ul>
+    <div class="card-body text-center sair">
+      <a href="#" class="card-link">Sair</a>
+    </div>
+  </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content"> 
+        <div class="modal-header">
+            <h5 class="modal-title text-center" id="exampleModalLabel">{{user.nome}}</h5>
+        </div>
+      <div class="modal-body">
+          
+        <div class="form-container form-teste ">
+
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input [(ngModel)]='user.nome' class="form-control " type="text" name="nome" id="nome" placeholder="Seu Nome">
+            </div>
+
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input [(ngModel)]='user.usuario' class="form-control " disabled="" type="text" name="usuario" id="usuario"
+                    placeholder="Seu usuario">
+            </div>
+
+            <div class="form-group">
+                <label for="usuario">Telefone</label>
+                <input [(ngModel)]='user.telefone' class="form-control " type="text" name="telefone" id="telefone"
+                    placeholder="Seu Telefone">
+            </div>
+
+            <div class="form-group">
+                <label for="cpfCnpj"> CPF / CNPJ </label>
+                <input [(ngModel)]='user.cpfCnpj' class="form-control " disabled="" type="text" name="cpfCnpj" id="cpfCnpj"
+                    placeholder="Seu cpf / Cnpj">
+            </div>
+
+            <div class="form-group">
+                <label for="foto">Link da foto</label>
+                <input [(ngModel)]="user.foto"  class="form-control " type="text" name="foto" id="foto" placeholder="Link da Foto">
+            </div>
+
+            <div class="form-group">
+                <label  for="senha">Senha</label>
+                <input [(ngModel)]='user.senha' class="form-control " type="password" name="senha" id="senha" placeholder="Senha">
+            </div>
+
+            <div class="form-group">
+                <label  for="confirmarSenha"> Confirmar Senha</label>
+                <input (input)="confirmSenha($event)"  class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                    placeholder="Confirme senha">
+            </div>
+
+            <div class="form-group">
+                <label for="tipoUser"> Tipo de Usuário</label>
+                <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
+                    <option>Selecione um tipo de usuário: </option>
+                    <option value="normal">Beneficiario</option>
+                    <option value="adm">Doador</option>
+                </select>
+            </div>
+
+
+        </div>
+          
+      </div>
+      <div class="modal-footer">
+        <div class="d-flex justify-content-center">
+            <button type="submit" class=" btn btn-danger me-4 mt-4 " data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success mt-4" (click)="atualizar()" data-dismiss="modal">Atualizar</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
