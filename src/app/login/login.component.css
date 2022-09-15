@@ -1,31 +1,71 @@
-#img-bg {
-    background-image: url('https://imgur.com/fBECDmQ.png');
-    min-height: 695px;
-
-    background-position: top;
+.container-fluid {
+    background-image: url("../../assets/img/mulher-bebendo-agua.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    font-family: Assistant, sans-serif;
+    display: flex;
+    min-height: 100vh;
+
 }
 
-.btn-success{
+.login {
+    color: white;
+
+    background:
+        -webkit-linear-gradient(to right, #267871, #136a8a);
+    background:
+        linear-gradient(to right, #267871, #556847);
+    margin: auto;
+    box-shadow:
+        60px 2px 60px rgba(0, 0, 0, 0.2),
+        60px 10px 60px rgba(0, 0, 0, 0.3),
+        10px 30px 60px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.texto {
+    color: #fff;
+}
+
+.btinicio{
     background-color: #556847;
-    border-color: #556847;
 }
 
-.btn{
-    line-height: 1;
+button:hover {
+    background: #fff;
+    color: dimgray;
+    transition: .5s
 }
 
-.form-control{
-    background-color: #D9D9D9;
-    font-family: 'Mulish';
-}
-.ft-M{
-    font-family: 'Mulish';
-}
 
-.h1{
+h1 {
     font-family: 'Poppins';
-    font-weight: bold;
-    padding: 20px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+label {
+    font-family: 'Mulish';
+}
+
+input,
+.tipouser {
+    background-color: #D9D9D9;
+
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input:focus {
+
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #34ca71;
+    outline: 0;
+    box-shadow: none;
+
 }
