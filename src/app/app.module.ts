@@ -22,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { MenuVerdeComponent } from './menu-verde/menu-verde.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { MenuVerdeComponent } from './menu-verde/menu-verde.component';
     UsuarioComponent,
     SobreComponent,
     MenuVerdeComponent
+    TemaEditComponent,
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,

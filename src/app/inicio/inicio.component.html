@@ -21,8 +21,8 @@
                 <textarea  rows="3" [(ngModel)]='postagem.legenda' placeholder="Escreva aqui a sua publicação"></textarea>
                 
                 <div class=" post-links">
-                <a href="#"><i class="fa fa-picture-o" aria-hidden="true">Foto/vídeo</i></a>
-                <button class="btn btn-success" (click)="publicar()">Postar</button>
+                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true">Foto/vídeo</i></a>
+                    <button class="btn btn-success" (click)="publicar()">Postar</button>
                 </div>
 
                 
@@ -36,42 +36,27 @@
                         </option>
                     </select>
                 </div>
-            <!-- Card-Feed-->
-
-            <div class="feed-container">
-                
-                <div class="row">
-                    <div class="user-profile">
-                        <img src="../../assets/img/Narcisa.jpg" alt="">
-                        <div>
-                            <p>{{user.nome}}</p>
-                            <small>14 de Setembro de 2022 às 12:00<i class="fa fa-caret-down" aria-hidden="true"></i></small>
-                        </div>
-                    </div>
-                    <a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
-                </div>
-
-
-                <p class="post-text"> Doando milhoes para fundação POÇO SOLIDARIO
-                    <a href="#">#DOAÇÃO</a>
-                </p>
-                <img src="../../assets/img/construção.jpg" alt="FOTOO POSTADA" class="post-img">
-
-                <!--ICON DOAR-->
-
-                <div class="post-row">
-                    <div class="icons">
-                        <div><i class="fa fa-heart" aria-hidden="true">Doar</i></div>
-                    </div>
-                </div>
-
             </div>
+            
+
+
+            <div *ngFor="let item of listaPosts"> 
+                 
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        
+                      <h1 class="display-4">{{item.legenda}}</h1>
+                      <p class="lead">{{item.usuario.nome}}</p>
+                      <p class="lead">{{item.tema.descricao}}</p>
+                      <img src="{{item.foto}}">
+                      <div class=" text-muted">
+                        {{item.localizacao}}
+                      </div>  
+                      <a href="#" class="btn btn-primary">Ajude já!</a>
+                    </div>
                 </div>
-    <!-- POST USER PERFIL-->
-
-
-
-
+   
+            </div>
 
 </div>
                                           

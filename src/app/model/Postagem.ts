@@ -9,7 +9,7 @@ export class Postagem{
     public legenda: string
     public doacao: string
     public feedback: string
-    public user: User 
+    public usuario: User
     public tema: Tema
 
 }
