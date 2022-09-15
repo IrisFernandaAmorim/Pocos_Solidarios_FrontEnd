@@ -7,6 +7,8 @@ import { Tema } from './model/Tema';
 import { HomeComponent } from './home/home.component';
 import { DevsComponent } from './devs/devs.component';
 import { TemaComponent } from './tema/tema.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 const routes: Routes = [
 
@@ -19,7 +21,9 @@ const routes: Routes = [
 
   {path: 'inicio', component: InicioComponent},
   {path: 'devs', component:DevsComponent},
-  {path: 'temas', component: TemaComponent}
+  {path: 'temas', component: TemaComponent},
+  {path: 'tema-edit/:id', component: TemaEditComponent},
+  {path: 'tema-delete/:id', component: TemaDeleteComponent}
   
 ];
 
