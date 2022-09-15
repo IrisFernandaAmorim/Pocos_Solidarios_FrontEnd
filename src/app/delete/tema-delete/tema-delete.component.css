@@ -1,0 +1,18 @@
+.ft{
+    font-family: poppins ;
+}
+.fs-30{
+    font-size: 30px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.modal{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
