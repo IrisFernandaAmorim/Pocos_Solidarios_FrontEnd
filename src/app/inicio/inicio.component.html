@@ -40,9 +40,23 @@
             
 
 
-
-
-
+            <div *ngFor="let item of listaPosts"> 
+                 
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        
+                      <h1 class="display-4">{{item.legenda}}</h1>
+                      <p class="lead">{{item.usuario.nome}}</p>
+                      <p class="lead">{{item.tema.descricao}}</p>
+                      <img src="{{item.foto}}">
+                      <div class=" text-muted">
+                        {{item.localizacao}}
+                      </div>  
+                      <a href="#" class="btn btn-primary">Ajude já!</a>
+                    </div>
+                </div>
+   
+            </div>
 
 </div>
                                           
