@@ -1,14 +1,22 @@
 #bg {
-    background: url(../../assets/img/bg.jpg);
+    background: url(../../assets/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: end;
-    filter:blur(2px);
+    background-position: center;
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.87);
+    text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.2em;
+
 }
 
 
 p{
-    text-shadow: black 0.1em 0.1em 0.2em;
+    text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.2em;
+    font-family: 'Poppins';
 }
 
 .svg-inline--fa {
