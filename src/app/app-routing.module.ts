@@ -25,12 +25,11 @@ const routes: Routes = [
   {path: 'temas', component: TemaComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
-
   {path: 'sobre', component: SobreComponent}
- 
+
 ];
 
-@NgModule({
+@NgModule ({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })

@@ -25,7 +25,6 @@ import { MenuVerdeComponent } from './menu-verde/menu-verde.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +39,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     TemaComponent,
     UsuarioComponent,
     SobreComponent,
-    MenuVerdeComponent
+    MenuVerdeComponent,
     TemaEditComponent,
     TemaDeleteComponent
   ],
@@ -49,9 +48,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    
-
+    ReactiveFormsModule
   ],
   providers: [{
     provide: LocationStrategy,
