@@ -1,0 +1,103 @@
+/*Globais*/
+img {
+    vertical-align: middle;
+
+}
+
+p {
+    font-family: 'Poppins';
+    src: url(https://fonts.googleapis.com/css?family=Poppins);
+}
+
+h2 {
+    font-family: 'Poppins';
+    src: url(https://fonts.googleapis.com/css?family=Mulish);
+}
+
+.fs-lg {
+    font-size: 1.125rem;
+}
+
+.p-md-5 {
+    padding-bottom: 6rem !important;
+    padding-top: 6rem !important;
+}
+
+.mt-5, .my-5 {
+    margin-top: 5rem!important;
+}
+
+/*Border*/
+
+.border {
+    pointer-events: none;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    position: fixed;
+}
+
+.media-decoration-border {
+    transform: translate3d(0px, 8.65211px, 0px);
+    display: block;
+    border: 1px solid #e9ecef;
+    left: 20%;
+    top: 10%;
+    height: 385px;
+    position: absolute;
+    width: 259px;
+    z-index: -1;
+}
+
+.media-decoration-solid {
+    transform: translate3d(0px, 4.65825px, 0px);
+    display: block;
+    background-color: #556847;
+    opacity: 20%;
+    width: 260px;
+    height: 385px;
+    position: absolute;
+    top: -10%;
+    left: -20%;
+    overflow: hidden;
+    z-index: -100;
+}
+
+/* Fim do border*/
+
+
+
+/*Estilo da Imagem*/
+
+.img-fluid,
+.img-thumbnail {
+    width: 260px;
+    height: 385px;
+}
+
+/*Fim do estilo da Imagem*/
+
+
+.mb-md-0,
+.my-md-0 {
+    margin-bottom: 0 !important;
+}
+
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333%;
+}
+
+.hr-sm {
+    width: 2rem;
+    margin: 1rem 0;
+}
+
+.hr-sm:not([size]) {
+    color: #556847;
+    height: 3px;
+}
+
+.bg-divider {
+    background-color: #556847;
+}
