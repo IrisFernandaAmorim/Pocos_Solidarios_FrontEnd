@@ -48,24 +48,9 @@ export class InicioComponent implements OnInit {
     this.findByIdUser()
   }
 
-  fillTemaList() {
-    if (this.listaTemas && this.listaPosts) {
-      for (const tema of this.listaTemas) {
-          tema.postagem = [];
-          for (const post of this.listaPosts) {
-            if (tema.id === post.tema.id) {
-              tema.postagem.push(post);
-            }
-          }
-
-      }
-    }
-  }
-
     getAllTemas(){
       this.temaService.getAllTema().subscribe((resp: Tema[])=>{
         this.listaTemas = resp
-        console.log(this.listaTemas)
       })
     }
 
@@ -78,6 +63,7 @@ export class InicioComponent implements OnInit {
     getAllPosts(){
       this.postagemService.getAllpostagens().subscribe((resp: Postagem[])=>{
         this.listaPosts = resp
+        console.log("Todos os Posts",resp)
       })
     }
 
@@ -93,8 +79,9 @@ export class InicioComponent implements OnInit {
       this.postagem.tema = this.tema
       
       this.user.id = this.idUser
-      this.postagem.user = this.user
+      this.postagem.usuario = this.user
       this.postagem.localizacao = this.user.endereco
+    
 
       this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem)=>{
         this.postagem = resp
