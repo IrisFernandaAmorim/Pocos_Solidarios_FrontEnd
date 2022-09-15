@@ -21,6 +21,7 @@ import { TemaComponent } from './tema/tema.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { MenuVerdeComponent } from './menu-verde/menu-verde.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
@@ -39,6 +40,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     TemaComponent,
     UsuarioComponent,
     SobreComponent,
+    MenuVerdeComponent
     TemaEditComponent,
     TemaDeleteComponent
   ],
