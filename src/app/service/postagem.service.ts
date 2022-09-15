@@ -42,4 +42,8 @@ export class PostagemService {
   deletePostagem(id:number):Observable<Postagem>{
    return this.http.delete<Postagem>(`${baseUrl}postagens/${id}`,this.getToken())
   }
+
+  getPostagensUsuario(id:number):Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`${baseUrl}postagens/usuario/${id}`,this.getToken())
+  }
 }

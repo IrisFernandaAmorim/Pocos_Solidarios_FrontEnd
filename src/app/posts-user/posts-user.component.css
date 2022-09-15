@@ -1,0 +1,27 @@
+.all{
+    font-family: 'Poppins';
+}
+.d-flex{
+    background-color: #ebdad1;
+}
+
+.card-body{
+    background: #fff;
+}
+.card-body img{
+    width: 45px;
+    border-radius: 50px;
+    margin-right: 10px;
+    display: inline-block; 
+    align-items: right;
+}
+
+.col-md-4 img{
+    width: 900px;
+}
+
+.button,
+.buttons-group{
+    display:flex;
+    margin-right: 50px;
+}
