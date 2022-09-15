@@ -3,7 +3,9 @@
     background-color: #384f3f;
     color:white;
     
-
+    font-family: 'Poppins';
+    src: url(https://fonts.googleapis.com/css?family=Poppins);
+    color: rgba(255,255,255,1);
 }
 
 
@@ -14,7 +16,8 @@
 
 .social-network {
 
-    font-size: 40px;
+    font-size: 25px;
+    
 
 }
 
