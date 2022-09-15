@@ -1,9 +1,50 @@
-#img-bg {
-    background-image: url("https://i.imgur.com/D0owFzX.jpeg");
-    min-height: 600px;
-    background-position: center;
+
+body {
+    background-image: url("../../assets/img/projeto2.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover ;
+
+    font-family: Assistant, sans-serif;
+    display: flex;
+    min-height: 90vh;
+    
+  }
+
+  .login {
+    color: white;
+    
+    background: 
+      -webkit-linear-gradient(to right, #267871, #136a8a);
+    background: 
+      linear-gradient(to right, #267871, #556847);
+    margin: auto;
+    box-shadow: 
+      60px 2px 60px rgba(0,0,0,0.2), 
+      60px 10px 60px rgba(0,0,0,0.3), 
+      10px 30px 60px 1px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    padding: 50px;
+  }
+
+
+  .texto{
+    color: #616060;
+  
+  }
+
+
+
+.cd {
+    background: #47C2C3;
+    font-family: Assistant, sans-serif;
+    display: flex;
+    min-height: 90vh;
+  }
+
+button:hover {
+    background: #fff;
+    color: rgb(45, 45, 45);
+    transition: .5s
 }
 
 .form-teste {
@@ -20,7 +61,7 @@ h1 {
 
 
 .btns {
-    background-color: #556847;
+    background-color: #5ebb1c;
     color: white;
 }
 
@@ -41,4 +82,20 @@ input,
 
 .form-group {
     margin-bottom: 10px;
+}
+
+input:focus {
+
+    color: #000;
+    background-color: #fff;
+    border:2px solid #34ca71;
+    outline: 0;
+    box-shadow: none;
+
+}
+
+.form-container {
+
+  
+
 }
