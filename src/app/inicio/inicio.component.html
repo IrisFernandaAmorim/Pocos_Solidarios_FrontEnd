@@ -60,10 +60,46 @@
                     <div class="text-muted">
                         {{item.localizacao}}
                     </div>
-                    <button type="button" class="btn btn-outline-info btn-sm bgt">Ajudar</button>
+                    <button (click)="buscarUser(item)" type="button" class="btn btn-outline-info btn-sm bgt" data-toggle="modal" data-target="#modaledit">Ajudar </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+    <div class="modal fade" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="modaledit" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content"> 
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">Para Doar, entre em contato via:</h5>
+                </div>
+            <div class="modal-body">
+                
+            <div class="form-container form-teste ">
+    
+    
+                <div class="form-group">
+                    <label for="Telefone">Telefone:</label>
+                    <input  class="form-control " disabled="" value="{{selectUser.telefone}}" type="text" name="telefone" id="telefone"
+                        placeholder="Sua telefone">
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input  class="form-control " disabled="" value="{{selectUser.endereco}}" type="text" name="telefone" id="endereco"
+                        placeholder="Seu endereco">
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">ou E-mail</label>
+                    <input  class="form-control " disabled="" value="{{selectUser.usuario}}" type="text" name="usuario" id="usuario"
+                        placeholder="Sua telefone">
+                </div>
+                        <button class="btn btn-danger me-20" data-dismiss="modal">fechar</button>
+            </div>
+                
+        </div>
+    </div>
+    </div>
+</div>
+ 

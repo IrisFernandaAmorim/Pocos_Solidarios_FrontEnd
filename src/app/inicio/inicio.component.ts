@@ -25,6 +25,7 @@ export class InicioComponent implements OnInit {
 
   user:User = new User()
   idUser = environment.id
+  selectUser: User  = new User()
 
   userLocal = environment.endereco
 
@@ -94,5 +95,9 @@ export class InicioComponent implements OnInit {
 
   irTema(){
     this.router.navigate(['/temas'])
+  }
+
+  buscarUser(post: Postagem){
+      this.selectUser = post.usuario
   }
 }
