@@ -1,10 +1,10 @@
 
 .container-fluid {
-    background-image: url("../../assets/img/projeto2.jpg");
+    background-image: url("../../assets/img/the-water-surface-is-blurred-in-the-old-jar-free-photo.jpg");
     background-repeat: no-repeat;
     background-size:cover ;
 
-    font-family: Assistant, sans-serif;
+    font-family: 'Poppins';
     display: flex;
     min-height: 90vh;
     
@@ -24,6 +24,8 @@
       10px 30px 60px 1px rgba(0,0,0,0.5);
     border-radius: 30px;
     padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
 .fonte{
