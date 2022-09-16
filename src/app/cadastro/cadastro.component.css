@@ -26,20 +26,16 @@
     padding: 50px;
   }
 
+.fonte{
+  color: #fff;
+  font-size: 11px;
+  font-family: 'Poppins';
 
-  .texto{
-    color: #616060;
-  
-  }
+}
 
-
-
-.cd {
-    background: #47C2C3;
-    font-family: Assistant, sans-serif;
-    display: flex;
-    min-height: 90vh;
-  }
+  .texto {
+    color: #fff;
+}
 
 button:hover {
     background: #fff;
@@ -58,7 +54,6 @@ h1 {
     font-size: 40px;
     font-weight: 900;
 }
-
 
 .btns {
     background-color: #5ebb1c;
@@ -91,11 +86,5 @@ input:focus {
     border:2px solid #34ca71;
     outline: 0;
     box-shadow: none;
-
-}
-
-.form-container {
-
-  
 
 }
