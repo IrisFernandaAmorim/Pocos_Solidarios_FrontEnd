@@ -43,7 +43,7 @@ import { PostsUserComponent } from './posts-user/posts-user.component';
     MenuVerdeComponent,
     TemaEditComponent,
     TemaDeleteComponent,
-    PostsUserComponent
+    PostsUserComponent,
   ],
   imports: [
     BrowserModule,

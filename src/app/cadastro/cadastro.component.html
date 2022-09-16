@@ -1,14 +1,14 @@
 <div class="container-fluid">
-  
-    <div>
-        <button type="submit" class="btn btn-outline-ligth me-5 texto" routerLink="/home">inicio</button>
-    </div>
 
+    <a routerLink='/home' class="text-white text-left">
+        <i class="fa fa-reply" aria-hidden="true"> Voltar</i>
+    </a>
 
-    <div  class="login mt-1 mb-1" >
-        <div class="form-container  mt-0">
+    <div  class="login mt-5 mb-5" >
+        <div class="form-container mt-0">
+            <img class="d-flex" width="300" height="100" src="../../assets/img/logo-branca-ok.png" alt="" loading="lazy">
 
-            <h1 class="text-center mt-0 mb-0">Cadastro</h1>
+            <h2 class="text-center mt-0 mb-0">Cadastro</h2>
 
             <div class="form-container">
 
@@ -19,9 +19,9 @@
                 </div>
 
                 <div class="form-group mt-0 mb-0">
-                    <label for="usuario">Usuário</label>
+                    <label for="usuario">E-mail</label>
                     <input [(ngModel)]='user.usuario' class="form-control " type="text" name="usuario" id="usuario"
-                        placeholder="Coloque o seu email* ">
+                        placeholder="Coloque o seu e-mail* ">
                 </div>
 
                 <div class="form-group mt-0 mb-0">
@@ -40,7 +40,7 @@
                 <div class="form-group mt-0 mb-0">
                     <label for="endereco">Endereço</label>
                     <input [(ngModel)]="user.endereco" class="form-control " type="text" name="endereco" id="endereco"
-                        placeholder="Digite seu Endereço*">
+                        placeholder="Digite seu endereço*">
                 </div>
 
 
@@ -53,7 +53,7 @@
                 <div class="form-group mt-0 mb-0">
                     <label for="telefone">Telefone</label>
                     <input [(ngModel)]='user.telefone' class="form-control " type="text" name="telefone" id="telefone"
-                        placeholder=" Digite seu Telefone*">
+                        placeholder=" Digite seu telefone*">
                 </div>
 
                 <div class="form-group mt-0 mb-0">
