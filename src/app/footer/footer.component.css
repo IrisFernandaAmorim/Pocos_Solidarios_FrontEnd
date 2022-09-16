@@ -17,6 +17,7 @@
 .social-network {
 
     font-size: 25px;
+    margin-bottom: 0px;
     
 
 }
@@ -44,4 +45,41 @@
 .fa-instagram{
 
     color:white;
+}
+
+
+
+/*hover*/
+.fa-facebook-square:hover{
+
+    color: rgb(126, 201, 167);
+}
+
+.fa-twitter:hover{
+
+    color: rgb(126, 201, 167);
+}
+.fa-google:hover{
+
+    color: rgb(126, 201, 167);
+}
+
+.fa-linkedin-square:hover{
+
+    color: rgb(126, 201, 167);
+}
+
+.fa-instagram:hover{
+
+    color: rgb(126, 201, 167);
+}
+
+.texto {
+    font-family: 'Poppins';
+    src: url(https://fonts.googleapis.com/css?family=Poppins);
+    
+    color: rgba(255,255,255,1);
+    font-weight: bolder;
+    font-size: x-large;
+    
 }

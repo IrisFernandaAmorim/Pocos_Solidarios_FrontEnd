@@ -34,11 +34,17 @@ export class PostsUserComponent implements OnInit {
 
     getPostagensUser(){
       this.postagemService.getPostagensUsuario(this.idUser).subscribe((resp: Postagem[])=>{
+        resp.sort((a:Postagem, b:Postagem)=>{
+              if(a.id > b.id){
+                return -1
+              }
+              return 1;
+            })
+        
         this.listaPostagensUser = resp
         console.log("AQUIIIIIIIIIII----->",resp)
       })
     }
-
 
     selectPubli(publ : Postagem){
       this.publiSelecionada = publ;

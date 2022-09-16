@@ -18,6 +18,7 @@ export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPosts: Postagem[]
+  listaPostsFix: Postagem[]
 
   listaTemas: Tema[]
   idTema: number
@@ -63,7 +64,14 @@ export class InicioComponent implements OnInit {
 
     getAllPosts(){
       this.postagemService.getAllpostagens().subscribe((resp: Postagem[])=>{
+        resp.sort((a:Postagem, b:Postagem)=>{
+          if(a.id > b.id){
+            return -1
+          }
+          return 1;
+        })
         this.listaPosts = resp
+        this.listaPostsFix = resp
         console.log("Todos os Posts",resp)
       })
     }
@@ -100,4 +108,15 @@ export class InicioComponent implements OnInit {
   buscarUser(post: Postagem){
       this.selectUser = post.usuario
   }
+
+  getFilterConcluidos(){
+    this.listaPosts = this.listaPostsFix.filter((post: Postagem)=> post.status) 
+  }
+  getFilterAberto(){
+    this.listaPosts = this.listaPostsFix.filter((post: Postagem)=> !post.status) 
+  }
+  getAllFixed(){
+    this.listaPosts = this.listaPostsFix 
+  }
+  
 }
