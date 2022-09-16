@@ -33,16 +33,11 @@
     color:rgb(6, 203, 252);
 }
 
-.btinicio{
-    background-color: #556847;
-}
-
 button:hover {
     background: #fff;
     color: dimgray;
     transition: .5s
 }
-
 
 h1 {
     font-family: 'Poppins';
