@@ -1,63 +1,105 @@
 <div class="d-flex">
-    <app-usuario></app-usuario>
-                                                        <!---POSTTTTT-->
+    <div class="user-container">
+        <app-usuario></app-usuario>
+    </div>
 
-    <!-- POST USER PERFIL-->
-        <div class="write-post-container">
-        
+    <div class="col feed-container">
+
+        <div class="create-post-container">
+
             <div class="user-profile">
                 <img src="{{user.foto}}" alt="">
                 <div>
-                    <p >{{user.nome}}</p>
+                    <p>{{user.nome}}</p>
                     <small>{{user.tipo}}</small>
                     <p>{{user.endereco}}</p>
                 </div>
             </div>
+            <hr>
 
-            
+            <div class="mt-2">
+                <textarea rows="3" [(ngModel)]='postagem.legenda'
+                    placeholder="Escreva aqui a sua publicação"></textarea>
 
-            <div class="post-container"> 
-
-                <textarea  rows="3" [(ngModel)]='postagem.legenda' placeholder="Escreva aqui a sua publicação"></textarea>
-                
-                <div class=" post-links">
-                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true">Foto/vídeo</i></a>
-                    <button class="btn btn-success" (click)="publicar()">Postar</button>
+                <div class="row align-items-center justify-content-between col-md-12 m-0 p-0">
+                    <div class="form-group form-control-sm novo-tema-container me-4"><i class="fa fa-id-card-o"></i>
+                        <label for="tema">  Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
+                                tema</button>
+                        </label>
+                        <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'
+                            (change)="findByIdTema()">
+                            <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                                {{item.descricao}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-0">
+                        <label for="icon"><i class="mr-2 fa fa-picture-o text-muted" aria-hidden="true">  Foto</i></label>
+                        
+                        <input [(ngModel)]='postagem.foto' class="form-control-sm-3" type="text" name="foto"id="foto" placeholder=" Coloque o link da foto">
+                    
+                    </div>
+                    <button type="button" class="btn btn-outline-success btn-sm mr-2" (click)="publicar()">Postar</button>
                 </div>
+            </div>
+        </div>
+        
+        <!---CARD POSTADO-->
+        <div class="col-group mb-2 post-container" *ngFor="let item of listaPosts">
 
+            <div class="col-md-4 p-0">
+                <img src="{{item.foto}}">
+            </div>
+
+            <div class="col p-0">
+                <div class="card-body">
+                    <img src="{{user.foto}}" alt="">
+                    <p class="lead">{{item.usuario.nome}}</p>
+                    <p class="lead-d">Tema: {{item.tema.descricao}}</p>
+                    <h5 class="card-title">{{item.legenda}}</h5>
+                    <div class="text-muted">
+                        {{item.localizacao}}
+                    </div>
+                    <button (click)="buscarUser(item)" type="button" class="btn btn-outline-info btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="modaledit" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content"> 
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">Para Doar, entre em contato via:</h5>
+                </div>
+            <div class="modal-body">
                 
+            <div class="form-container form-teste ">
+    
+    
+                <div class="form-group">
+                    <label for="Telefone">Telefone:</label>
+                    <input  class="form-control " disabled="" value="{{selectUser.telefone}}" type="text" name="telefone" id="telefone"
+                        placeholder="Sua telefone">
+                </div>
 
                 <div class="form-group">
-                    <label for="tema">Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo tema</button>
-                    </label>
-                    <select class="form-control" name="tema" id="tema"  [(ngModel)]='idTema' (change)="findByIdTema()">
-                        <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                          {{item.descricao}}
-                        </option>
-                    </select>
+                    <label for="endereco">Endereço</label>
+                    <input  class="form-control " disabled="" value="{{selectUser.endereco}}" type="text" name="telefone" id="endereco"
+                        placeholder="Seu endereco">
                 </div>
-            </div>
-            
 
-
-            <div *ngFor="let item of listaPosts"> 
-                 
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                        
-                      <h1 class="display-4">{{item.legenda}}</h1>
-                      <p class="lead">{{item.usuario.nome}}</p>
-                      <p class="lead">{{item.tema.descricao}}</p>
-                      <img src="{{item.foto}}">
-                      <div class=" text-muted">
-                        {{item.localizacao}}
-                      </div>  
-                      <a href="#" class="btn btn-primary">Ajude já!</a>
-                    </div>
+                <div class="form-group">
+                    <label for="Email">ou E-mail</label>
+                    <input  class="form-control " disabled="" value="{{selectUser.usuario}}" type="text" name="usuario" id="usuario"
+                        placeholder="Sua telefone">
                 </div>
-   
+                        <button class="btn btn-danger me-20" data-dismiss="modal">fechar</button>
             </div>
-
+                
+        </div>
+    </div>
+    </div>
 </div>
-                                          
  

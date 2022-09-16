@@ -1,6 +1,6 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
     <div class="img-name">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3b3HwlPW0CVbEOQ_ftF1Giki1C_uv7-Y6AA&usqp=CAU" alt="Card image cap" class="card-img-top" alt="...">
+        <img src="{{user.foto}}" alt="Card image cap" class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">{{user.nome}}</h5>
         </div>
@@ -8,12 +8,12 @@
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
             <i class="fa fa-home" aria-hidden="true"></i>
-            <a  href="...">Feed</a>
+            <a routerLink="/inicio">Feed</a>
         </li>
 
         <li class="list-group-item">
             <i class="fa fa-address-book-o" aria-hidden="true"></i>
-           <a>Meus Posts</a>
+           <a routerLink="/meusposts">Meus Posts</a>
         </li>
 
         <li class="list-group-item conf">
@@ -94,8 +94,8 @@
       </div>
       <div class="modal-footer">
         <div class="d-flex justify-content-center">
-            <button type="submit" class=" btn btn-danger me-4 mt-4 " data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success mt-4" (click)="atualizar()" data-dismiss="modal">Atualizar</button>
+            <button type="submit" class=" btn btn-danger ms-4 mt-4 " data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success ms-4 mt-4" (click)="atualizar()" data-dismiss="modal">Atualizar</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,93 @@
+<!---CARD POSTADO-->
+<div class="d-flex">
+  <div class="user-container">
+    <app-usuario></app-usuario>
+  </div>
+  <div class="post-container">
+    <div class="col-group mb-2" *ngFor="let item of listaPostagensUser">
+
+      <div class="col-md-4">
+          <img src="{{item.foto}}">
+      </div>
+
+      <div class="col">
+          <div class="card-body">
+              <img src="{{item.usuario.foto}}" alt="">
+              <p class="lead">{{item.usuario.nome}}</p>
+              <p class="lead-d">Tema: {{item.tema.descricao}}</p>
+              <h5 class="card-title">{{item.legenda}}</h5>
+              <div class="text-muted">
+                  {{item.localizacao}}
+              </div>
+              <div class="buttons-group">
+                  <button (click)="selectPubli(item)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Concluido
+                  </button>
+                  
+                  <button (click)="selectPubli(item)" *ngIf="!item.status" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modaledit">
+                    Editar
+                  </button>
+
+                  <button (click)="deletePost()" *ngIf="!item.status" type="button" class="btn btn-danger" >
+                    Excluir
+                  </button>
+              </div> 
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL DE CONCLUIDAA -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Confirma que a publicação{{publiSelecionada.legenda}} foi concluida?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="concluido(publiSelecionada.legenda)" >Concluido!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE EDIÇÃO DE POST -->
+
+<div class="modal fade" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="modaledit" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content"> 
+      <div class="modal-header">
+          <h5 *ngIf="publiSelecionada" class="modal-title text-center" id="exampleModalLabel">{{publiSelecionada?.usuario?.nome}}</h5>
+      </div>
+      <div class="modal-body">
+          
+        <div class="form-container form-teste ">
+
+
+            <div class="form-group">
+                <label for="legenda">Legenda</label>
+                <input *ngIf="publiSelecionada" [(ngModel)]='publiSelecionada.legenda' class="form-control "  type="text" name="legenda" id="legenda"
+                    placeholder="Sua legenda">
+            </div>
+
+        </div>
+          
+      </div>
+      <div class="modal-footer">
+        <div class="d-flex justify-content-center">
+            <button type="submit" class=" btn btn-danger me-4 mt-4 " data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success mt-4" (click)="atualizarPost()" data-dismiss="modal">Atualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

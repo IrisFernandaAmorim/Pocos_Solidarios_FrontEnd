@@ -1,5 +1,5 @@
 
-body {
+.container-fluid {
     background-image: url("../../assets/img/projeto2.jpg");
     background-repeat: no-repeat;
     background-size:cover ;
@@ -26,6 +26,11 @@ body {
     padding: 50px;
   }
 
+
+  .texto{
+    color: #616060;
+  
+  }
 
 
 

@@ -3,6 +3,7 @@
         <button type="submit" class="btn me-5 texto" routerLink="/home">Início</button>
     </div>
     <div class="login mt-5 mb-5">
+
         <div class="justify-content-center">
             <img class="d-flex mt-0 ml-3 mb-0" width="300" height="100" src="../../assets/img/logo-branca-ok.png" alt="" loading="lazy">
            </div>
@@ -10,6 +11,7 @@
         <h1 class="text-center mt-3 mb-3">Entrar</h1>
 
         <div class="form-group mt-0 mb-3">
+
             <label for="usuario">Usuário</label>
             <input [(ngModel)]="userLogin.usuario" class="form-control" type="text" name="usuario" id="usuario"
                 placeholder="Seu usuário">
@@ -25,9 +27,11 @@
             <button type="submit" class="btn btn-success" (click)="entrar()">Entrar</button>
         </div>
 
+
         <div class="d-flex justify-content-around mt-4 pb-2">
             <p class="text-center ft-M">
                 Não tem uma conta? <a routerLink='/cadastrar' class="cd">Cadastre-se</a>
+
             </p>
         </div>
     </div>

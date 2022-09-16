@@ -1,5 +1,11 @@
-<body>
-    <section  class="login mt-1 mb-1" >
+<div class="container-fluid">
+  
+    <div>
+        <button type="submit" class="btn btn-outline-ligth me-5 texto" routerLink="/home">inicio</button>
+    </div>
+
+
+    <div  class="login mt-1 mb-1" >
         <div class="form-container  mt-0">
 
             <h1 class="text-center mt-0 mb-0">Cadastro</h1>
@@ -65,13 +71,17 @@
                     </select>
                 </div>
 
-                <div class="d-flex justify-content-around mt-3 pb-2">
-                    <button type="submit" class=" btn btnc " routerLink="/login">Cancelar</button>
-                    <button type="submit" class="btn btns me-5 " (click)="cadastrar()">Cadastrar</button>
+
+                <div class="d-flex justify-content-around mt-4 pb-2">
+
+                <div class="d-flex justify-content-around mt-2 pb-2">
+
+                    <button type="submit" class=" btn btnc me-4" routerLink="/login">Cancelar</button>
+                    <button type="submit" class="btn btns ml-4 " (click)="cadastrar()">Cadastrar</button>
                 </div>
             </div>
         </div>
 
-
-    </section>
-</body>
+    </div>
+    
+</div>

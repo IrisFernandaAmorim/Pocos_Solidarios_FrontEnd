@@ -11,5 +11,6 @@ export class Postagem{
     public feedback: string
     public usuario: User
     public tema: Tema
-
+    public data: Date
+    public status?: string
 }

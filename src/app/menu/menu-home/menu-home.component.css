@@ -1,7 +1,11 @@
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.705);
+}
+
 .navbar-brand {
     font-family: 'Poppins';
-    src: url(https://fonts.googleapis.com/css?family=Poppins);
     color: rgba(255,255,255,1);
 }
+
 
 

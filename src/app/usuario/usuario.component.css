@@ -47,3 +47,14 @@
   border-image: initial;
   outline: none;
 }
+
+.card {
+  width: 90%;
+}
+
+.modal-header{
+  background: #e4dedb; ;
+}
+.modal-body{
+  background-color:#e4dedb7c ;
+}
