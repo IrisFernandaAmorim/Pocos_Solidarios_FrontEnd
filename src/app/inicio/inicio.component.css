@@ -28,12 +28,8 @@
     font-size: 13px;
     font-family:'Courier New', Courier, monospace ;
 }
-.post-container{
-    padding-left: 55px;
-    padding-top: 20px;
-}
 
-.post-container textarea{
+.create-post-container textarea{
     width: 100%;
     border: 0;
     outline: 0;
@@ -67,12 +63,10 @@
     margin-left: 190px;
 }
 
-.post-container{
-    width: 80%;
+.create-post-container{
+    width: 98%;
     background: #fff;
     border-radius: 6px;
-    padding: 20px;
-    margin: 20px 0;
     color: black;
 }
 .user-profile{
@@ -152,7 +146,8 @@
 
 .card-body{
     background: #fff;
-    width: 900px;
+    width: 100%;
+    border-radius: 6px;
 }
 .card-body img{
     width: 45px;
@@ -178,4 +173,28 @@
 }
 .button{
     margin-right: 50px;
+}
+
+.user-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 20px;
+    width: 30%;
+}
+
+.feed-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 20px;
+    width: 70%;
+    margin-right: 3%;
+}
+
+.novo-tema-container {
+    height: auto;
+    text-align: center;
+}
+
+.post-container {
+    width: 98%;
 }

@@ -1,10 +1,11 @@
 <div class="d-flex">
+    <div class="user-container">
+        <app-usuario></app-usuario>
+    </div>
 
-    <app-usuario></app-usuario>
+    <div class="col feed-container">
 
-    <div class="container">
-
-        <div class="post-container">
+        <div class="create-post-container">
 
             <div class="user-profile">
                 <img src="{{user.foto}}" alt="">
@@ -20,64 +21,49 @@
                 <textarea rows="3" [(ngModel)]='postagem.legenda'
                     placeholder="Escreva aqui a sua publicação"></textarea>
 
-                <div class="row align-items-center">
-                    <div class="col">
-                        <div class="form-group mx-sm-3 mb-3 form-control-sm">
-                            <label for="tema">Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
-                                    tema</button>
-                            </label>
-                            <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'
-                                (change)="findByIdTema()">
-                                <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                                    {{item.descricao}}
-                                </option>
-                            </select>
-                        </div>
+                <div class="row align-items-center justify-content-between col-md-12 m-0 p-0">
+                    <div class="form-group form-control-sm novo-tema-container">
+                        <label for="tema">Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
+                                tema</button>
+                        </label>
+                        <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'
+                            (change)="findByIdTema()">
+                            <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                                {{item.descricao}}
+                            </option>
+                        </select>
                     </div>
-
-                    <div class="col-auto">
-                        <div class="form-group mx-sm-3 mb-2 mt-5">
-                            <label for="icon"><i class="fa fa-picture-o text-muted" aria-hidden="true">Foto</i></label>
-                            
-                            <input [(ngModel)]='postagem.foto' class="form-control-sm-3" type="text" name="foto"id="foto" placeholder=" Coloque o link da foto">
+                    <div class="form-group mb-0">
+                        <label for="icon"><i class="mr-2 fa fa-picture-o text-muted" aria-hidden="true">Foto</i></label>
                         
-                        </div>
+                        <input [(ngModel)]='postagem.foto' class="form-control-sm-3" type="text" name="foto"id="foto" placeholder=" Coloque o link da foto">
+                    
                     </div>
-
-                    <div class="col-auto">
-                    <button type="button" class="btn btn-outline-success btn-sm mt-5" (click)="publicar()">Postar</button>
-                    </div>
-
+                    <button type="button" class="btn btn-outline-success btn-sm mr-2" (click)="publicar()">Postar</button>
                 </div>
             </div>
         </div>
+        
+        <!---CARD POSTADO-->
+        <div class="col-group mb-2 post-container" *ngFor="let item of listaPosts">
 
+            <div class="col-md-4 p-0">
+                <img src="{{item.foto}}">
+            </div>
 
-
-                <!---CARD POSTADO-->
-
-                <div class="col-group mb-2" *ngFor="let item of listaPosts">
-
-                    <div class="col-md-4">
-                        <img src="{{item.foto}}">
+            <div class="col p-0">
+                <div class="card-body">
+                    <img src="{{user.foto}}" alt="">
+                    <p class="lead">{{item.usuario.nome}}</p>
+                    <p class="lead-d">Tema: {{item.tema.descricao}}</p>
+                    <h5 class="card-title">{{item.legenda}}</h5>
+                    <div class="text-muted">
+                        {{item.localizacao}}
                     </div>
-
-                    <div class="col">
-                        <div class="card-body">
-                            <img src="{{user.foto}}" alt="">
-                            <p class="lead">{{item.usuario.nome}}</p>
-                            <p class="lead-d">Tema: {{item.tema.descricao}}</p>
-                            <h5 class="card-title">{{item.legenda}}</h5>
-                            <div class="text-muted">
-                                {{item.localizacao}}
-                            </div>
-                            <button type="button" class="btn btn-outline-info btn-sm bgt">Ajudar</button>
-                        </div>
-                    </div>
-
-                 </div>
-
-
+                    <button type="button" class="btn btn-outline-info btn-sm bgt">Ajudar</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

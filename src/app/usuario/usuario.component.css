@@ -47,3 +47,7 @@
   border-image: initial;
   outline: none;
 }
+
+.card {
+  width: 90%;
+}

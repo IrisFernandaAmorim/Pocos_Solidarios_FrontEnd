@@ -24,4 +24,16 @@
 .buttons-group{
     display:flex;
     margin-right: 50px;
+    align-content: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.post-container {
+    width: 70%;
+}
+
+.user-container {
+    width: 30%;
+    margin-top: 23px;
 }
