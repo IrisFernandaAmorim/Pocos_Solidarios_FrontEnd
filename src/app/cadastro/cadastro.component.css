@@ -3,12 +3,14 @@
     background-image: url("../../assets/img/the-water-surface-is-blurred-in-the-old-jar-free-photo.jpg");
     background-repeat: no-repeat;
     background-size:cover ;
+    background-position: top;
 
     font-family: 'Poppins';
     display: flex;
     min-height: 90vh;
     
   }
+
 
   .login {
     color: white;
@@ -35,7 +37,14 @@
 
 }
 
-  .texto {
+.cd {
+    background: #47C2C3;
+    font-family: Poppins;
+    display: flex;
+    min-height: 90vh;
+  }
+
+.texto {
     color: #fff;
 }
 
@@ -69,6 +78,9 @@ h1 {
 
 label {
     font-family: 'Mulish';
+    margin-bottom: 0px;
+    margin-top: 5px;
+
 }
 
 input,
