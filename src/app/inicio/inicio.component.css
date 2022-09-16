@@ -214,3 +214,28 @@
 .btn2{
     margin-top: 2%
 }
+.filtrar{
+    margin-left: 80%;
+    margin-top: 2%;
+    color: black;
+}
+.fa-check-circle{
+   color: green;
+}
+.fa-times-circle{
+  color: red;
+}
+.fa-globe{
+  color: blue;
+}
+li{
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+li:hover{
+    background-color: #ccc;
+}
+.dropdown{
+    justify-content: center;
+}

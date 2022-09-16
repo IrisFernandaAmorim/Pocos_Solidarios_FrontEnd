@@ -44,6 +44,17 @@
             </div>
         </div>
         
+        <div class="dropdown d-flex justify-content-between filtrar">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-filter" aria-hidden="true">  Filtrar</i>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li (click)="getAllFixed()"><i class="fa fa-globe" aria-hidden="true"></i> Todos</li>
+                <li (click)="getFilterConcluidos()"><i class="fa fa-check-circle" aria-hidden="true"></i> Concluídos</li>
+                <li (click)="getFilterAberto()"> <i class="fa fa-times-circle" aria-hidden="true"></i> Em aberto</li>
+            </ul>
+        </div>
         <!---CARD POSTADO-->
         <div class="col-group mb-2 post-container" *ngFor="let item of listaPosts">
 
@@ -60,7 +71,8 @@
                     <div class="text-muted">
                         {{item.localizacao}}
                     </div>
-                    <button (click)="buscarUser(item)" type="button" class="btn btn-outline-info btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
+                    <button *ngIf="item.status" disabled="" type="button" class="btn btn-success " data-toggle="modal" data-target="#modaledit">Concluído </button>
+                    <button *ngIf="!item.status" (click)="buscarUser(item)" type="button" class="btn btn-outline-info btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
                 </div>
             </div>
         </div>
