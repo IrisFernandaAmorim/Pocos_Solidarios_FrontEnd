@@ -51,3 +51,10 @@
 .card {
   width: 90%;
 }
+
+.modal-header{
+  background-color:#EBDAD1 ;
+}
+.modal-body{
+  background-color:#ebdad17c ;
+}

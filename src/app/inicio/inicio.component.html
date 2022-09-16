@@ -22,8 +22,8 @@
                     placeholder="Escreva aqui a sua publicação"></textarea>
 
                 <div class="row align-items-center justify-content-between col-md-12 m-0 p-0">
-                    <div class="form-group form-control-sm novo-tema-container">
-                        <label for="tema">Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
+                    <div class="form-group form-control-sm novo-tema-container me-4"><i class="fa fa-id-card-o"></i>
+                        <label for="tema">  Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
                                 tema</button>
                         </label>
                         <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'
@@ -34,7 +34,7 @@
                         </select>
                     </div>
                     <div class="form-group mb-0">
-                        <label for="icon"><i class="mr-2 fa fa-picture-o text-muted" aria-hidden="true">Foto</i></label>
+                        <label for="icon"><i class="mr-2 fa fa-picture-o text-muted" aria-hidden="true">  Foto</i></label>
                         
                         <input [(ngModel)]='postagem.foto' class="form-control-sm-3" type="text" name="foto"id="foto" placeholder=" Coloque o link da foto">
                     
@@ -60,7 +60,7 @@
                     <div class="text-muted">
                         {{item.localizacao}}
                     </div>
-                    <button (click)="buscarUser(item)" type="button" class="btn btn-outline-info btn-sm bgt" data-toggle="modal" data-target="#modaledit">Ajudar </button>
+                    <button (click)="buscarUser(item)" type="button" class="btn btn-outline-info btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
                 </div>
             </div>
         </div>
