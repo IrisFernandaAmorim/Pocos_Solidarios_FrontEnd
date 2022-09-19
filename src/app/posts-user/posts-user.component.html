@@ -28,7 +28,7 @@
                     Editar
                   </button>
 
-                  <button (click)="deletePost()" *ngIf="!item.status" type="button" class="btn btn-danger" >
+                  <button (click)="deletePost(item.id)" *ngIf="!item.status" type="button" class="btn btn-danger" >
                     Excluir
                   </button>
               </div> 

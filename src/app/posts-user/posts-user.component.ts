@@ -65,8 +65,8 @@ export class PostsUserComponent implements OnInit {
       })
     }
 
-    deletePost(){
-      this.postagemService.deletePostagem(this.publiSelecionada.id).subscribe(()=>{
+    deletePost(id:number){
+      this.postagemService.deletePostagem(id).subscribe(()=>{
           alert('postagem apagada com sucesso!')
           this.getPostagensUser()
         })
