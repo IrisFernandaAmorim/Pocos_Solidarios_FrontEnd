@@ -6,4 +6,4 @@ export const environment = {
   foto: '',
   endereco: ''
 };
-export const baseUrl = "Http://localhost:8080/"
+export const baseUrl = "https://pocosolidario.herokuapp.com/swagger-ui/index.html#"
