@@ -1,18 +1,16 @@
 <div class="container-fluid">
 
-    <div>
-        <button type="submit" class="btn me-5 texto" routerLink="/home">Início</button>
-    </div>
-    <div class="login mt-1 mb-1">
+    <a routerLink='/home' class="text-white text-left">
+        <i class="fa fa-reply" aria-hidden="true"> Voltar</i>
+    </a>
 
-        <div class="justify-content-center">
-            <img class="d-flex mb-2" width="300" height="100" src="../../assets/img/logo-branca-ok.png" alt=""
-                loading="lazy">
-        </div>
+<div  class="login mt-5 mb-5" >
+        <div class="form-container mt-0">
+            <img class="d-flex" width="300" height="100" src="../../assets/img/logo-branca-ok.png" alt="" loading="lazy">
 
-        <h1 class="text-center mt-2">Cadastro</h1>
+            <h2 class="text-center mt-0 mb-0">Cadastro</h2>
 
-        <div class="form-container">
+  <div class="form-container">
 
             <div class="form-group mt-3">
                 <label for="nome">Nome*</label>
@@ -22,8 +20,13 @@
 
             <div class="form-group mt-3">
                 <label for="usuario">Usuário*</label>
+<<<<<<< HEAD
                 <input [(ngModel)]='user.usuario' class="form-control " type="email" name="usuario" id="usuario"
                     placeholder="Coloque o seu email">
+=======
+                <input [(ngModel)]='user.usuario' class="form-control " type="text" name="usuario" id="usuario"
+                    placeholder="Coloque o seu e-mail">
+>>>>>>> ea457761249c6527999250170ccf9d36769affea
             </div>
 
             <div class="form-group mt-3">
@@ -36,17 +39,16 @@
                 <label for="foto">Confirmar senha*</label>
                 <input [(ngModel)]="user.senha" class="form-control" type="password" name="confirmSenha"
                     id="confirmSenha" placeholder="Confirme sua senha">
-
             </div>
 
             <div class="form-group mt-3">
                 <label for="endereco">Endereço*</label>
                 <input [(ngModel)]="user.endereco" class="form-control " type="text" name="endereco" id="endereco"
-                    placeholder="Digite seu Endereço">
+                    placeholder="Digite seu endereço">
             </div>
 
 
-            <div class="form-group mt-3">
+           <div class="form-group mt-3">
                 <label for="cpf_cnpj">CPF/CNPJ*</label>
                 <input [(ngModel)]='user.cpfCnpj' class="form-control " type="text" name="cpf_cnpj" id="cpf_cnpj"
                     placeholder=" Digite seu CPF OU CNPJ">
@@ -75,6 +77,7 @@
 
 
             <p class="fonte mt-3">* Campos obrigatórios</p>
+            
             <div class="d-flex justify-content-around mt-4 pb-2">
 
                 <button type="submit" class=" btn btnc me-4" routerLink="/login">Cancelar</button>
