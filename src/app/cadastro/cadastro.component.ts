@@ -37,13 +37,19 @@ export class CadastroComponent implements OnInit {
 
       if(this.user.senha != this.confirmarSenha ){
           alert('As senhas estão incorretas! ')
-      } else{
-        this.authService.cadastrar(this.user).subscribe((resp: User) =>{
-          this.user = resp
-          this.router.navigate(['/login'])
-          alert('Usuário cadastrado com sucesso!')
-        })
+      } 
+      else{
+          console.log(this.user.foto)
+          if(this.user.foto===undefined){
+            this.user.foto = "https://meralink.com.br/upload_perfil/cZdmIbAAAAAI062FYTEd4-GPKTKl.jpg"
+          }
+          else{
+          this.authService.cadastrar(this.user).subscribe((resp: User) =>{
+            this.user = resp
+            this.router.navigate(['/login'])
+            alert('Usuário cadastrado com sucesso!')
+      })
+        }
       }
   }
-
 }
