@@ -1,5 +1,11 @@
+<div class="img-bg" [ngClass]="{'light-theme': theme, 'dark-theme': !theme }">
 <div class="d-flex">
     <div class="user-container">
+        
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label (click)="toggle()" class="custom-control-label" for="customSwitch1">Modo escuro</label>
+          </div>
         <app-usuario></app-usuario>
     </div>
 
@@ -10,7 +16,7 @@
             <div class="user-profile">
                 <img src="{{user.foto}}" alt="">
                 <div>
-                    <p>{{user.nome}}</p>
+                    <p class="text-bold">{{user.nome}}</p>
                     <small>{{user.tipo}}</small>
                     <p>{{user.endereco}}</p>
                 </div>
@@ -18,61 +24,84 @@
             <hr>
 
             <div class="mt-2">
-                <textarea rows="3" [(ngModel)]='postagem.legenda'
-                    placeholder="Escreva aqui a sua publicação"></textarea>
 
-                <div class="row align-items-center justify-content-between col-md-12 m-0 p-0">
-                    <div class="form-group form-control-sm novo-tema-container me-4"><i class="fa fa-id-card-o"></i>
-                        <label for="tema">  Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
-                                tema</button>
-                        </label>
-                        <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'
-                            (change)="findByIdTema()">
-                            <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                                {{item.descricao}}
-                            </option>
+                <div class="important text-att">
+
+
+                <!-- TEMA COM ICONE -->
+                <div>
+                    <label for="tema">  Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
+                        tema</button>
+                    </label>
+                    <div class="input-group is-invalid tema">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                <i class="mr-2 fa fa-id-card-o text-muted" aria-hidden="true">  </i>
+                            </span>
+                    </div>
+                    <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'
+                        (change)="findByIdTema()">
+                        <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                            {{item.descricao}}
+                        </option>
                         </select>
-                    </div>
-                    <div class="form-group mb-0">
-                        <label for="icon"><i class="mr-2 fa fa-picture-o text-muted" aria-hidden="true">  Foto</i></label>
-                        
-                        <input [(ngModel)]='postagem.foto' class="form-control-sm-3" type="text" name="foto"id="foto" placeholder=" Coloque o link da foto">
-                    
-                    </div>
-                    <button type="button" class="btn btn-outline-success btn-sm mr-2" (click)="publicar()">Postar</button>
                 </div>
+
+
+                    <textarea class="text" rows="3" [(ngModel)]='postagem.legenda'
+                        placeholder="Escreva aqui a sua publicação">                                           
+                    </textarea>
+                    <!-- FOTO COM ICONE -->
+                    <div class="mb-3">
+                        <div class="input-group is-invalid">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                <i class="mr-2 fa fa-picture-o text-muted" aria-hidden="true">  </i>
+                            </span>
+                            
+                            <div class="d-flex justify-content-between">
+                                <input [(ngModel)]='postagem.foto' type="text" class="form-control-sm-3" placeholder=" Coloque o link da foto" >
+                            </div>
+                            <button type="button" class="btn button-margin btn-success btn-sm " (click)="publicar()">Postar</button>
+                            </div>
+                        </div>
+                   </div>
+                
             </div>
         </div>
         
-        <div class="dropdown d-flex justify-content-between filtrar">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <i class="fa fa-filter" aria-hidden="true">  Filtrar</i>
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li (click)="getAllFixed()"><i class="fa fa-globe" aria-hidden="true"></i> Todos</li>
-                <li (click)="getFilterConcluidos()"><i class="fa fa-check-circle" aria-hidden="true"></i> Concluídos</li>
-                <li (click)="getFilterAberto()"> <i class="fa fa-times-circle" aria-hidden="true"></i> Em aberto</li>
-            </ul>
-        </div>
+        <hr>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class="fa fa-filter" aria-hidden="true">  Filtrar</i>
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li (click)="getAllFixed()"><i class="fa fa-globe" aria-hidden="true"></i> Todos</li>
+                    <li (click)="getFilterConcluidos()"><i class="fa fa-check-circle" aria-hidden="true"></i> Concluídos</li>
+                    <li (click)="getFilterAberto()"> <i class="fa fa-times-circle" aria-hidden="true"></i> Em aberto</li>
+                </ul>
+            </div>
+
+
         <!---CARD POSTADO-->
         <div class="col-group mb-2 post-container" *ngFor="let item of listaPosts">
-
-            <div class="col-md-4 p-0">
-                <img src="{{item.foto}}">
-            </div>
 
             <div class="col p-0">
                 <div class="card-body">
                     <img src="{{user.foto}}" alt="">
                     <p class="lead">{{item.usuario.nome}}</p>
-                    <p class="lead-d">Tema: {{item.tema.descricao}}</p>
-                    <h5 class="card-title">{{item.legenda}}</h5>
-                    <div class="text-muted">
-                        {{item.localizacao}}
+                        <div class="d-alinhar">
+                            <h5 class="card-title">{{item.legenda}}</h5>
+                            <p class="lead-d">Tema: {{item.tema.descricao}}</p>
+                        </div>
+                    
+                    <div class="col-md-4 p-0">
+                        <img src="{{item.foto}}">
+                        <button *ngIf="item.status" disabled="" type="button" class="btn btn-success btn-img" data-toggle="modal" data-target="#modaledit">Concluído </button>
+                        <button *ngIf="!item.status" (click)="buscarUser(item)" type="button" class="btn btn-img btn-outline-info btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
                     </div>
-                    <button *ngIf="item.status" disabled="" type="button" class="btn btn-success " data-toggle="modal" data-target="#modaledit">Concluído </button>
-                    <button *ngIf="!item.status" (click)="buscarUser(item)" type="button" class="btn btn-outline-info btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
+
                 </div>
             </div>
         </div>
@@ -114,6 +143,6 @@
     </div>
     </div>
 </div>
-
+</div>
        
   

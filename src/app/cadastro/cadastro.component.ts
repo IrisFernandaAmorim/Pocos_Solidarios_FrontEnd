@@ -39,7 +39,7 @@ export class CadastroComponent implements OnInit {
           alert('As senhas estão incorretas! ')
       } 
       else{
-          console.log(this.user.foto)
+          
           if(this.user.foto===undefined){
             this.user.foto = "https://meralink.com.br/upload_perfil/cZdmIbAAAAAI062FYTEd4-GPKTKl.jpg"
           }

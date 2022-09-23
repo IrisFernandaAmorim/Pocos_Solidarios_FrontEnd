@@ -46,12 +46,16 @@
   border-color:0ch;
   border-image: initial;
   outline: none;
+  color: rgb(82, 82, 255);
 }
 
-.card {
+.card{
   width: 90%;
+  background-color:var( --cor-card-user)
 }
-
+.li-itens{
+  background-color:var( --cor-card-user)
+}
 .modal-header{
   background: #e4dedb; ;
 }
