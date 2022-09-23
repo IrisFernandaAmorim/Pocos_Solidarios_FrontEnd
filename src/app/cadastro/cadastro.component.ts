@@ -40,16 +40,15 @@ export class CadastroComponent implements OnInit {
       } 
       else{
           
-          if(this.user.foto===undefined){
-            this.user.foto = "https://meralink.com.br/upload_perfil/cZdmIbAAAAAI062FYTEd4-GPKTKl.jpg"
+           const usuario = {...this.user}
+          if(usuario.foto===undefined){
+            usuario.foto = "https://meralink.com.br/upload_perfil/cZdmIbAAAAAI062FYTEd4-GPKTKl.jpg"
           }
-          else{
-          this.authService.cadastrar(this.user).subscribe((resp: User) =>{
+          this.authService.cadastrar(usuario).subscribe((resp: User) =>{
             this.user = resp
             this.router.navigate(['/login'])
             alert('Usuário cadastrado com sucesso!')
       })
-        }
       }
   }
 }
