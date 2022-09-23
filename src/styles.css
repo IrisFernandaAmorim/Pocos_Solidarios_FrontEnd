@@ -9,6 +9,7 @@ body {
     --cor-feed-escuro:linear-gradient(to right, #c5c5e457, #5452c54f);
     --cor-feed-claro:linear-gradient(to right, #3a9177af, #556847bb);
     --cor-card-user:rgba(255, 255, 255, 0.774);
+    --cor-buttom: grey;
 }
 
 .dark-theme{
@@ -16,4 +17,5 @@ body {
 --cor-feed-escuro: #0c0d0e;
 --cor-feed-claro: #24272b;
 --cor-card-user: #0c0d0e;
+--cor-buttom: white;
 }

@@ -127,30 +127,37 @@
     margin-right: 5px;
 }
 
-.but{
+/* .but{
     background-color: transparent;
       border-width: 0px;
       border-color:0ch;
       border-image: initial;
       text-decoration: underline;
       color: blue;
-}
+} */
 button, input, select{
     background-color: var(--cor-feed-escuro);
     color: white;
 }
 
+.btn-success{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
 
-
-
-
-
+.btn-danger{
+    color: #fff;
+    background-color: #ff4136;
+    border-color: #ff4136;
+}
 
 
 .bgt{
-
-    color: #47C2C3;
+    color: #fff;
     align-items: 80px;
+    background-color: #3d9970;
+    border-color: #3d9970;
 }
 
 

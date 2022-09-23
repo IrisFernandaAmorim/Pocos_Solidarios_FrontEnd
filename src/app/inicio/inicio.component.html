@@ -30,8 +30,7 @@
 
                 <!-- TEMA COM ICONE -->
                 <div>
-                    <label for="tema">  Temas <button class="but" (click)="irTema()" data-bs-dismiss="modal">Novo
-                        tema</button>
+                    <label for="tema">  Temas <button class="btn bgt" (click)="irTema()" data-bs-dismiss="modal"><a href="../../assets/img/temabtn.png"></a></button>
                     </label>
                     <div class="input-group is-invalid tema">
                         <div class="input-group-prepend">
@@ -99,7 +98,7 @@
                     <div class="col-md-4 p-0">
                         <img src="{{item.foto}}">
                         <button *ngIf="item.status" disabled="" type="button" class="btn btn-success btn-img" data-toggle="modal" data-target="#modaledit">Concluído </button>
-                        <button *ngIf="!item.status" (click)="buscarUser(item)" type="button" class="btn btn-img btn-outline-info btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
+                        <button *ngIf="!item.status" (click)="buscarUser(item)" type="button" class="btn btn-img btn-sm bgt btn2" data-toggle="modal" data-target="#modaledit">Ajudar </button>
                     </div>
 
                 </div>
@@ -136,7 +135,7 @@
                     <input  class="form-control " disabled="" value="{{selectUser.usuario}}" type="text" name="usuario" id="usuario"
                         placeholder="Sua telefone">
                 </div>
-                        <button class="btn btn-danger me-20" data-dismiss="modal">fechar</button>
+                        <button class="btn btn-danger me-20" data-dismiss="modal">Fechar</button>
             </div>
                 
         </div>
