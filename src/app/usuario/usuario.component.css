@@ -2,6 +2,9 @@
     width: 150px;
     border-radius: 1000px;
   }
+  .card-title{
+    color:#2f766e;
+  }
 
   .img-name{ 
     display: flex;
@@ -54,7 +57,7 @@
   background-color:var( --cor-card-user)
 }
 .li-itens{
-  background-color:var( --cor-card-user)
+  background-color:rgb(227 243 249);
 }
 .modal-header{
   background: #e4dedb; ;

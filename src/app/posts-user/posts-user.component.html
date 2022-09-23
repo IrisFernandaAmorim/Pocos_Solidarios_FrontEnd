@@ -1,42 +1,41 @@
 <!---CARD POSTADO-->
-<div class="d-flex">
+<div class="d-flex ">
   <div class="user-container">
     <app-usuario></app-usuario>
   </div>
   <div class="post-container">
-    <div class="col-group mb-2" *ngFor="let item of listaPostagensUser">
+  
+    <div class="col-group mb-2 post-container" *ngFor="let item of listaPostagensUser">
 
-      <div class="col-md-4">
-          <img src="{{item.foto}}">
+        <div class="col p-0">
+            <div class="card-body">
+                
+                    <div class="d-alinhar">
+                        <h5 class="card-title">{{item.legenda}}</h5>
+                        <p class="lead-d">Tema: {{item.tema.descricao}}</p>
+                    </div>
+                
+                <div class="col-md-4 p-0">
+                    <img src="{{item.foto}}">
+                    <div class="buttons-group">
+                      <button (click)="selectPubli(item)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Concluido
+                      </button>
+                      
+                      <button (click)="selectPubli(item)" *ngIf="!item.status" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modaledit">
+                        Editar
+                      </button>
+    
+                      <button (click)="deletePost(item.id)" *ngIf="!item.status" type="button" class="btn btn-danger" >
+                        Excluir
+                      </button>
+                  </div> 
+                </div>
+
+            </div>
+        </div>
       </div>
-
-      <div class="col">
-          <div class="card-body">
-              <img src="{{item.usuario.foto}}" alt="">
-              <p class="lead">{{item.usuario.nome}}</p>
-              <p class="lead-d">Tema: {{item.tema.descricao}}</p>
-              <h5 class="card-title">{{item.legenda}}</h5>
-              <div class="text-muted">
-                  {{item.localizacao}}
-              </div>
-              <div class="buttons-group">
-                  <button (click)="selectPubli(item)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Concluido
-                  </button>
-                  
-                  <button (click)="selectPubli(item)" *ngIf="!item.status" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modaledit">
-                    Editar
-                  </button>
-
-                  <button (click)="deletePost(item.id)" *ngIf="!item.status" type="button" class="btn btn-danger" >
-                    Excluir
-                  </button>
-              </div> 
-          </div>
-      </div>
-
     </div>
-  </div>
 </div>
 
 
