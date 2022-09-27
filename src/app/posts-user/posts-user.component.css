@@ -65,3 +65,8 @@ col-md-4{
     width: 30%;
     margin-top: 23px;
 }
+
+.btn{
+    height: 38px;
+    margin: 2px;
+}
