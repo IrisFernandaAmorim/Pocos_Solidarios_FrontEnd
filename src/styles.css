@@ -3,3 +3,20 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+.light-theme{
+
+    --cor-feed-escuro:linear-gradient(to right, #c5c5e457, #5452c54f);
+    --cor-feed-claro:linear-gradient(to right, #3a9177af, #556847bb);
+
+    --cor-buttom: grey;
+}
+:root{
+    --cor-card-user:rgba(255, 255, 255, 0.774);
+}
+.dark-theme{
+
+--cor-feed-escuro: #0c0d0e;
+--cor-feed-claro: #24272b;
+--cor-buttom: white;
+}

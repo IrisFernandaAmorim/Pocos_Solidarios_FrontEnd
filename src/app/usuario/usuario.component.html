@@ -5,18 +5,18 @@
         <h5 class="card-title">{{user.nome}}</h5>
         </div>
     </div>    
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
+    <ul class="list-group list-group-flush ">
+        <li class="list-group-item li-itens">
             <i class="fa fa-home" aria-hidden="true"></i>
             <a routerLink="/inicio">Feed</a>
         </li>
 
-        <li class="list-group-item">
+        <li class="list-group-item li-itens">
             <i class="fa fa-address-book-o" aria-hidden="true"></i>
            <a routerLink="/meusposts">Meus Posts</a>
         </li>
 
-        <li class="list-group-item conf">
+        <li class="list-group-item conf li-itens">
             <i class="fa fa-cog" aria-hidden="true"></i>
                  <button  class="but me-2" data-toggle="modal" data-target="#exampleModalCenter">
                 Configurações
@@ -47,7 +47,7 @@
 
             <div class="form-group">
                 <label for="usuario">Usuário</label>
-                <input [(ngModel)]='user.usuario' class="form-control " disabled="" type="text" name="usuario" id="usuario"
+                <input [(ngModel)]='user.usuario' class="form-control" disabled="" type="text" name="usuario" id="usuario"
                     placeholder="Seu usuario">
             </div>
 
@@ -57,26 +57,15 @@
                     placeholder="Seu Telefone">
             </div>
 
-            <div class="form-group">
+            <div class="form-group ">
                 <label for="cpfCnpj"> CPF / CNPJ </label>
-                <input [(ngModel)]='user.cpfCnpj' class="form-control " disabled="" type="text" name="cpfCnpj" id="cpfCnpj"
+                <input [(ngModel)]='user.cpfCnpj' class="form-control"disabled="" type="text" name="cpfCnpj" id="cpfCnpj"
                     placeholder="Seu cpf / Cnpj">
             </div>
 
             <div class="form-group">
                 <label for="foto">Link da foto</label>
                 <input [(ngModel)]="user.foto"  class="form-control " type="text" name="foto" id="text" placeholder="Link da Foto">
-            </div>
-
-            <div class="form-group">
-                <label  for="senha">Senha</label>
-                <input [(ngModel)]='user.senha' class="form-control " type="password" name="senha" id="senha" placeholder="Senha">
-            </div>
-
-            <div class="form-group">
-                <label  for="confirmarSenha"> Confirmar Senha</label>
-                <input (input)="confirmSenha($event)"  class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-                    placeholder="Confirme senha">
             </div>
 
             <div class="form-group">
@@ -88,13 +77,26 @@
                 </select>
             </div>
 
+            <p class="text-center text-dark">Confirme a senha para fazer as atualizações:</p>
+
+            <div class="form-group">
+                <label  for="senha">Senha*</label>
+                <input [(ngModel)]='user.senha' class="form-control " type="password" name="senha" id="senha" placeholder="Senha">
+            </div>
+
+            <div class="form-group">
+                <label  for="confirmarSenha"> Confirmar Senha*</label>
+                <input (input)="confirmSenha($event)"  class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                    placeholder="Confirme senha">
+            </div>
+
 
         </div>
           
       </div>
       <div class="modal-footer">
         <div class="d-flex justify-content-center">
-            <button type="submit" class=" btn btn-danger ms-4 mt-4 " data-dismiss="modal">Cancelar</button>
+            <button type="submit" class=" btn btn-danger ms-4 mt-4 mr-2" data-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-success ms-4 mt-4" (click)="atualizar()" data-dismiss="modal">Atualizar</button>
         </div>
       </div>

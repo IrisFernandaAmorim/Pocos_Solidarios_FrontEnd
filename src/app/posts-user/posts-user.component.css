@@ -1,13 +1,26 @@
 .all{
     font-family: 'Poppins';
 }
-.d-flex{
-    background: #e4dedb;;
+
+.d-flex{ 
+        background-image: url("../../assets/img/gotas.png");
+        height: auto;
+        min-height: 100vh;
+        
 }
 
 .card-body{
-    background: #fff;
+    background: linear-gradient(to right, #3a9177af, #556847bb);
+    padding: 0%;
 }
+
+.d-alinhar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-body img{
     width: 45px;
     border-radius: 50px;
@@ -16,21 +29,36 @@
     align-items: right;
 }
 
-.col-md-4 img{
-    width: 900px;
+col-md-4{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
-.button,
+.col-md-4 img,
+.btn-img{
+    width: 300px;
+    margin-left: 100%;
+} 
+.buttons-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+/* .button,
 .buttons-group{
     display:flex;
     margin-right: 50px;
     align-content: center;
     width: 30%;
     justify-content: space-between;
-}
+} */
 
 .post-container {
-    width: 70%;
+    width: 98%;
+    margin-top: 2%;
 }
 
 .user-container {

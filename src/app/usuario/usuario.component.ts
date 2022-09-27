@@ -46,7 +46,7 @@ atualizar() {
   this.user.tipo = this.tipoUsuario
 
   if (this.user.senha != this.confirmarSenha) {
-    alert("Senhas incorretas!")
+    // alert("Senhas incorretas!")
   }
   else
     this.authService.atualizarUser(this.user).subscribe((resp: User) => {

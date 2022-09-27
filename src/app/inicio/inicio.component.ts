@@ -20,6 +20,8 @@ export class InicioComponent implements OnInit {
   listaPosts: Postagem[]
   listaPostsFix: Postagem[]
 
+  theme = true
+
   listaTemas: Tema[]
   idTema: number
   tema: Tema = new Tema()
@@ -117,6 +119,9 @@ export class InicioComponent implements OnInit {
   }
   getAllFixed(){
     this.listaPosts = this.listaPostsFix 
+  }
+  toggle(){
+    this.theme = !this.theme;
   }
   
 }
