@@ -1,3 +1,9 @@
+.container-fluid{
+    background: url(../../assets/img/gotas.png);
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
 
 .bg {
     background-color: #012951;
